@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Room</title>
+    <title>ANON NODE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="chat"></div>
-<input id="msg" placeholder="Type message..." />
-<button onclick="send()">Send</button>
+<div class="container">
 
-<button onclick="toggleLock()">Toggle Lock</button>
+    <!-- LEFT PANEL -->
+    <div class="panel">
+        <h3 class="glow">ONLINE OPERATIVES</h3>
+        <div id="users"></div>
+
+        <hr>
+
+        <h4 class="glow">THREAT MONITOR</h4>
+        <div id="monitor"></div>
+    </div>
+
+    <!-- CENTER PANEL -->
+    <div class="panel">
+        <h3 class="glow">SECURE TERMINAL</h3>
+        <div id="chat"></div>
+
+        <div style="margin-top:10px;">
+            <input id="msg" placeholder="Transmit encrypted message..." />
+            <button onclick="send()">SEND</button>
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="panel">
+        <h3 class="glow">CONTROL ACCESS</h3>
+
+        <button onclick="toggleLock()">INITIATE LOCKDOWN</button>
+        <br><br>
+        <button onclick="selfDestruct()">PURGE ROOM</button>
+
+        <hr>
+
+        <div id="systemLog"></div>
+    </div>
+
+</div>
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
