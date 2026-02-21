@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Lab</title>
+</head>
+<body>
+    <h2>Cyber Lab Chat</h2>
+    <input id="username" placeholder="Enter codename" />
+    <button onclick="createRoom()">Create Room</button>
+
+    <br><br>
+
+    <input id="roomId" placeholder="Room ID" />
+    <button onclick="joinRoom()">Join Room</button>
+
+    <script>
+        function createRoom() {
+            localStorage.setItem("username", document.getElementById("username").value);
+            window.location.href = "/chat.html?create=true";
+        }
+
+        function joinRoom() {
+            localStorage.setItem("username", document.getElementById("username").value);
+            localStorage.setItem("roomId", document.getElementById("roomId").value);
+            window.location.href = "/chat.html";
+        }
+    </script>
+</body>
+</html>
