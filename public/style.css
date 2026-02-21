@@ -1,0 +1,13 @@
+body {
+    background: black;
+    color: lime;
+    font-family: monospace;
+}
+
+#chat {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid lime;
+    margin-bottom: 10px;
+    padding: 5px;
+}
